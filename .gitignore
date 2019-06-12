@@ -1,0 +1,11 @@
+/BlazorBlogApp2.Client/obj
+/BlazorBlogApp2.Server/obj
+/BlazorBlogApp2.Shared/obj
+/SharedComponents/Blading.Component/obj
+/SharedComponents/Blading.Component/bin
+/SharedComponents/SimpleList.Component/obj
+/SharedComponents/SimpleList.Component/bin
+/BlazorBlogApp2.Client/bin
+/.vs
+/BlazorBlogApp2.Server/bin
+/BlazorBlogApp2.Shared/bin

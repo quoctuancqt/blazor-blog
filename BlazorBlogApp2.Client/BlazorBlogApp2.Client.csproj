@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <OutputType>Exe</OutputType>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BlazoredLocalStorage" Version="0.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Browser" Version="0.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.7.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1" />
+    <PackageReference Include="Toolbelt.Blazor.HttpClientInterceptor" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorBlogApp2.Shared\BlazorBlogApp2.Shared.csproj" />
+    <ProjectReference Include="..\SharedComponents\Blading.Component\Blading.Component.csproj" />
+    <ProjectReference Include="..\SharedComponents\SimpleList.Component\SimpleList.Component.csproj" />
+  </ItemGroup>
+
+</Project>

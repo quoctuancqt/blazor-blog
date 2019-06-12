@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Blazor.Services
+@inherits BaseLayoutComponent
+@inject IUriHelper UriHelper
+@addTagHelper *, Blading.Component
+
+<div class="main">
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+<LoadingIndicator IsShow="@AppState.InProcessing"></LoadingIndicator>
+
+@functions{
+    protected override async Task OnInitAsync()
+    {
+        _callback = () => UriHelper.NavigateTo("/");
+
+        await base.OnInitAsync();
+    }
+}

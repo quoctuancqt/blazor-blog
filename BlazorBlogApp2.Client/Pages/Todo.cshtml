@@ -1,0 +1,53 @@
+﻿@page "/todo"
+@inherits TodoModel
+
+<h1>ToDo List</h1>
+
+<div>
+    <div class="row">
+        <div class="col-sm-1">
+            <p>Item:</p>
+        </div>
+        <div class="col-sm-4">
+            <input id="todoName" placeholder="Item Name" bind="@itemName" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-1">
+            <button class="btn btn-info" id="btnAdd" onclick="@AddToDo">Add</button>
+        </div>
+        <div class="col-sm-2">
+            @if (todos != null && todos.Count > 0)
+            {
+                <button class="btn btn-danger" onclick="@DeleteAllToDos">Delete All</button>
+            }
+        </div>
+    </div>
+</div>
+<br /><br />
+@if (todos == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    @if (todos.Count > 0)
+    {
+        <table class='table table-striped table-bordered table-hover table-condensed' style="width:80%;">
+            <thead>
+                <tr>
+                    <th style="width: 40%">Name</th>
+                    <th style="width: 40%">Edit</th>
+                    <th style="width: 20%">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var todo in todos)
+                {
+                    <ToDoView TodoItem="todo" Callback="@RefreshAfterDelete"></ToDoView>
+                }
+            </tbody>
+        </table>
+    }
+}

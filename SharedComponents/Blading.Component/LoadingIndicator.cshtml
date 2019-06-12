@@ -1,0 +1,17 @@
+﻿@inherits LoadingIndicatorModel
+
+@{
+    var hiddenClass = IsShow ? "inherit" : "none";
+
+    <div id="loader" style="display:@hiddenClass">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="lading"></div>
+    </div>
+}

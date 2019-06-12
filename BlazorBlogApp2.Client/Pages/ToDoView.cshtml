@@ -1,0 +1,14 @@
+﻿@inherits TodoViewModel
+
+<tr>
+    <td>
+        <span id="spn_@TodoItem.Id">@TodoItem.Item</span>
+        <input id="txt_@TodoItem.Id" bind="@UpdateItemName" style="display:none;" />
+    </td>
+    <td>
+        <button id="btnEdit_@TodoItem.Id" class="btn btn-primary" onclick="@EditToDo">Edit</button>
+        <button id="btnUpdate_@TodoItem.Id" style="display:none;" class="btn btn-success" onclick="@UpdateToDo">Update</button>
+        <button id="btnCancel_@TodoItem.Id" style="display:none;" class="btn btn-primary" onclick="@CancelToDo">Cancel</button>
+    </td>
+    <td><button class="btn btn-danger" onclick="@DeleteToDo">Delete</button></td>
+</tr>

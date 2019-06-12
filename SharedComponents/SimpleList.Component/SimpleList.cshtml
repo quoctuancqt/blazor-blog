@@ -1,0 +1,29 @@
+﻿@inherits SimpleListModel
+
+<div class="simple-list">
+
+    <div class="simple-list-header">
+        <h1>Simple List</h1>
+
+        <input bind="@newItem" placeholder="Enter item to add to list" />
+        <button onclick="@AddItem">Add Item</button>
+    </div>
+
+    <div class="simple-list-list">
+
+        @if (!ToDoLists.Any())
+        {
+            <p>You have no items in your list</p>
+        }
+        else
+        {
+            <ul>
+                @foreach (var item in ToDoLists)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    </div>
+
+</div>

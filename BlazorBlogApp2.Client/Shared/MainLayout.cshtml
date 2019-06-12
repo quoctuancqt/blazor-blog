@@ -1,0 +1,39 @@
+﻿@inherits BaseLayoutComponent
+@addTagHelper *, Blading.Component
+
+<div class="sidebar">
+    <NavMenu isLoggendIn="AppState.IsLoggedIn" />
+</div>
+
+<div class="main">
+    <div class="top-row px-4">
+        @if (AppState.IsLoggedIn)
+        {
+            <a href="#" class="ml-md-auto" onclick="@Logout">Log Out</a>
+        }
+        else
+        {
+            <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
+        }
+    </div>
+
+    <div class="content px-4">
+        @Body
+    </div>
+</div>
+
+<LoadingIndicator IsShow="@AppState.InProcessing"></LoadingIndicator>
+
+@functions{
+    bool collapseNavMenu = true;
+
+    void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    protected async Task Logout()
+    {
+        await AppState.Logout();
+    }
+}
