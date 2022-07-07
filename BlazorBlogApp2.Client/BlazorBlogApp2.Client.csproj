@@ -10,7 +10,7 @@
     <PackageReference Include="BlazoredLocalStorage" Version="0.3.1" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Browser" Version="0.7.0" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor.Build" Version="0.7.0" PrivateAssets="all" />
-    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.1.22" />
     <PackageReference Include="Toolbelt.Blazor.HttpClientInterceptor" Version="2.1.0" />
   </ItemGroup>
 
